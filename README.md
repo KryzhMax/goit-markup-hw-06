@@ -1,2 +1,3 @@
-# goit-markup-hw-06
-HW #6
+# goit-markup-hw-02
+
+Second home task from the bootcamp25
