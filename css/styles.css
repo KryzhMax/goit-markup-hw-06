@@ -377,13 +377,13 @@ form {
   transition: border-color var(--transition);
 }
 
-/* .modal-input:hover, */
+.modal-input:hover,
 .modal-input:focus {
   border-color: var(--accent-color);
   outline: 1px solid transparent;
 }
 
-/* .modal-input:hover + .icon, */
+.modal-input:hover + .icon,
 .modal-input:focus + .icon {
   border-color: var(--transition);
   fill: var(--accent-color);
