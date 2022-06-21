@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body class="page">
     <header class="page-header">
       <div class="container">
@@ -464,29 +465,43 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="modal-thumb">
-          <form action="submit" class="form-public">
+          <form action="javascript:void(0);" class="form-public">
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
             <p class="modal-text">Имя</p>
             <label class="modal-label">
+              <input
+                class="modal-input"
+                type="name"
+                minlength="3"
+                required
+                name="user-name"
+              />
               <svg class="icon" width="18" height="18">
                 <use href="./images/styles.svg#icon-person"></use>
               </svg>
-              <input class="modal-input" type="name" />
             </label>
             <p class="modal-text">Телефон</p>
             <label class="modal-label">
+              <input
+                class="modal-input"
+                type="tel"
+                name="tel"
+                minlength="10"
+                maxlength="13"
+                required
+                title="Номер телефона должен начинаться с +380"
+              />
               <svg class="icon" width="18" height="18">
                 <use href="./images/styles.svg#icon-tel"></use>
               </svg>
-              <input class="modal-input" type="tel"
-            /></label>
+            </label>
             <p class="modal-text">Почта</p>
             <label class="modal-label">
+              <input class="modal-input" type="email" name="email" required />
               <svg class="icon" width="18" height="18">
                 <use href="./images/styles.svg#icon-email"></use>
               </svg>
-              <input class="modal-input" type="email"
-            /></label>
+            </label>
             <p class="modal-text">Комментарий</p>
             <label class="modal-label" for="feedback">
               <textarea
@@ -498,10 +513,22 @@
                 rows="30"
               ></textarea>
             </label>
-            <label class="personal-data">
-              <input type="checkbox" name="personal_data" value="agreement" />
+            <label class="personal-data" for="cb">
+              <input
+                id="cb"
+                class="cutsom-input visually-hidden"
+                type="checkbox"
+                name="personal-data"
+                value="agreement"
+                required
+              />
+              <span class="ticker">
+                <svg width="16" height="15" class="ticker-icon">
+                  <use href="./images/styles.svg#icon-ticker"></use>
+                </svg>
+              </span>
               Соглашаюсь с рассылкой и принимаю
-              <a href="" class="public_data">Условия договора</a></label
+              <a href="" class="public-agreement">Условия договора</a></label
             >
             <button type="submit" class="button">Отправить</button>
           </form>
