@@ -467,8 +467,9 @@
         <div class="modal-thumb">
           <form action="javascript:void(0);" class="form-public">
             <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-            <p class="modal-text">Имя</p>
+            <!-- <p class="modal-text"></p> -->
             <label class="modal-label">
+              <span class="modal-text">Имя</span>
               <input
                 class="modal-input"
                 type="name"
@@ -480,8 +481,8 @@
                 <use href="./images/styles.svg#icon-person"></use>
               </svg>
             </label>
-            <p class="modal-text">Телефон</p>
             <label class="modal-label">
+              <span class="modal-text">Телефон</span>
               <input
                 class="modal-input"
                 type="tel"
@@ -495,15 +496,17 @@
                 <use href="./images/styles.svg#icon-tel"></use>
               </svg>
             </label>
-            <p class="modal-text">Почта</p>
-            <label class="modal-label">
+            <!-- <p class="modal-text">Почта</p> -->
+            <label class="modal-label"
+              ><span class="modal-text">Почта</span>
               <input class="modal-input" type="email" name="email" required />
               <svg class="icon" width="18" height="18">
                 <use href="./images/styles.svg#icon-email"></use>
               </svg>
             </label>
-            <p class="modal-text">Комментарий</p>
-            <label class="modal-label" for="feedback">
+            <!-- <p class="modal-text">Комментарий</p> -->
+            <label class="modal-label" for="feedback"
+              ><span class="modal-text">Комментарий</span>
               <textarea
                 placeholder="Введите текст"
                 class="modal-input placeholder"

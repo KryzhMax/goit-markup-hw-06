@@ -342,10 +342,10 @@ form {
 }
 
 .modal-text {
+  display: inline-block;
   font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.01em;
-  margin-top: 10px;
   margin-bottom: 4px;
 
   color: #757575;
@@ -353,18 +353,21 @@ form {
 
 .modal-label {
   position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
-.modal .icon {
+.modal-label .icon {
   position: absolute;
   top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
+  left: 50%;
+  left: 15px;
+  transform: translateY(-50%, -50%);
   transition: fill var(--transition);
 }
 
 .modal-input {
-  display: inline-block;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 448px;
