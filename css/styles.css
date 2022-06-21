@@ -22,11 +22,6 @@ body {
 }
 
 /* Утилиты */
-label,
-input {
-  margin: 0;
-  padding: 0;
-}
 
 ul,
 h1,
