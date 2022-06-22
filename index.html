@@ -442,7 +442,7 @@
           </ul>
         </div>
         <div class="footer-item">
-          <form action="submit" class="form">
+          <form class="form">
             <label>
               <b class="footer-title">Подпишитесь на рассылку</b>
               <input
@@ -464,58 +464,67 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <div class="modal-thumb">
-          <form action="javascript:void(0);" class="form-public">
-            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-            <!-- <p class="modal-text"></p> -->
-            <label class="modal-label">
-              <span class="modal-text">Имя</span>
-              <input
-                class="modal-input"
-                type="text"
-                minlength="3"
-                required
-                name="user-name"
-              />
-              <svg class="icon" width="18" height="18">
-                <use href="./images/styles.svg#icon-person"></use>
-              </svg>
-            </label>
-            <label class="modal-label">
-              <span class="modal-text">Телефон</span>
-              <input
-                class="modal-input"
-                type="tel"
-                name="tel"
-                minlength="10"
-                maxlength="13"
-                required
-                title="Номер телефона должен начинаться с +380"
-              />
-              <svg class="icon" width="18" height="18">
-                <use href="./images/styles.svg#icon-tel"></use>
-              </svg>
-            </label>
-            <!-- <p class="modal-text">Почта</p> -->
-            <label class="modal-label"
-              ><span class="modal-text">Почта</span>
-              <input class="modal-input" type="email" name="email" required />
-              <svg class="icon" width="18" height="18">
-                <use href="./images/styles.svg#icon-email"></use>
-              </svg>
-            </label>
-            <!-- <p class="modal-text">Комментарий</p> -->
-            <label class="modal-label" for="feedback"
-              ><span class="modal-text">Комментарий</span>
-              <textarea
-                placeholder="Введите текст"
-                class="modal-input placeholder"
-                name="feedback"
-                id="feedback"
-                cols="5"
-                rows="30"
-              ></textarea>
-            </label>
+        <form action="javascript:void(0);" class="form-public">
+          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <label class="modal-label" for="user-name">
+            <span class="modal-text">Имя*</span></label
+          >
+          <div class="modal-wrapper">
+            <input
+              class="modal-input"
+              type="text"
+              minlength="3"
+              required
+              name="user-name"
+              id="user-name"
+            />
+            <svg class="icon" width="18" height="18">
+              <use href="./images/styles.svg#icon-person"></use>
+            </svg>
+          </div>
+          <label class="modal-label" for="tel">
+            <span class="modal-text">Телефон*</span></label
+          >
+          <div class="modal-wrapper">
+            <input
+              class="modal-input"
+              type="tel"
+              name="tel"
+              id="tel"
+              minlength="10"
+              maxlength="13"
+              required
+              title="Номер телефона должен начинаться с +380"
+            />
+            <svg class="icon" width="18" height="18">
+              <use href="./images/styles.svg#icon-tel"></use>
+            </svg>
+          </div>
+          <label class="modal-label" for="email"
+            ><span class="modal-text">Почта*</span></label
+          >
+          <div class="modal-wrapper">
+            <input
+              class="modal-input"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+            <svg class="icon" width="18" height="18">
+              <use href="./images/styles.svg#icon-email"></use>
+            </svg>
+          </div>
+          <label class="modal-label" for="feedback"
+            ><span class="modal-text">Комментарий</span>
+            <textarea
+              placeholder="Введите текст"
+              class="modal-input placeholder"
+              name="feedback"
+              id="feedback"
+            ></textarea>
+          </label>
+          <div class="modal-terms">
             <label class="personal-data" for="cb">
               <input
                 id="cb"
@@ -533,26 +542,26 @@
               Соглашаюсь с рассылкой и принимаю
               <a href="" class="public-agreement">Условия договора</a></label
             >
-            <button type="submit" class="button">Отправить</button>
-          </form>
-          <button
-            data-modal-close
-            name="close_button"
-            value="primary"
-            type="button"
-            class="close-btn"
+          </div>
+          <button type="submit" class="button">Отправить</button>
+        </form>
+        <button
+          data-modal-close
+          name="close_button"
+          value="primary"
+          type="button"
+          class="close-btn"
+        >
+          <svg
+            class="close-icon"
+            width="11"
+            height="11"
+            aria-hidden="true"
+            tabindex="0"
           >
-            <svg
-              class="close-icon"
-              width="11"
-              height="11"
-              aria-hidden="true"
-              tabindex="0"
-            >
-              <use href="./images/styles.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
+            <use href="./images/styles.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>

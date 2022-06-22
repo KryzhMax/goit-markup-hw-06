@@ -283,6 +283,7 @@ img {
   height: 581px;
   top: 50%;
   left: 50%;
+  padding: 40px;
 
   transform: translate(-50%, -50%);
   transition: transform var(--transition);
@@ -293,15 +294,9 @@ img {
   border-radius: 4px;
 }
 
-.modal-thumb {
+/* .modal-thumb {
   position: relative;
-  padding: 40px;
-}
-
-.modal-thumb .form-public {
-  margin: 0;
-  /* padding: 40px; */
-}
+} */
 
 .modal .close-icon {
   fill: var(--title-color);
@@ -344,7 +339,7 @@ img {
 }
 
 .modal-text {
-  display: inline-block;
+  display: block;
   font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.01em;
@@ -354,30 +349,43 @@ img {
 }
 
 .modal-label {
-  position: relative;
   display: block;
+}
+
+.modal-wrapper {
+  position: relative;
   align-items: center;
 }
 
-.modal-label:not(:last-child) {
+.modal-label:not(:last-of-type) {
   margin-bottom: 10px;
 }
 
-.modal-label .icon {
+.modal-label:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* label {
+  line-height: 1;
+} */
+
+.modal-wrapper .icon {
   position: absolute;
   top: 50%;
-  left: 50%;
   left: 15px;
-  transform: translateY(-50%, -50%);
+  transform: translateY(-50%);
   transition: fill var(--transition);
 }
 
 .modal-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  width: 448px;
+  width: 100%;
   padding-left: 42px;
   height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  outline: none;
 
   transition: border-color var(--transition);
 }
@@ -385,7 +393,6 @@ img {
 .modal-input:hover,
 .modal-input:focus {
   border-color: var(--accent-color);
-  outline: 1px solid transparent;
 }
 
 .modal-input:hover + .icon,
@@ -407,9 +414,6 @@ img {
   font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.01em;
-  min-height: 118px;
-  resize: none;
-  overflow: auto;
 
   color: rgba(117, 117, 117, 0.5);
 }
